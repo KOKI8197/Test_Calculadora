@@ -8,9 +8,9 @@ const calculadora = new Calculadora();
 describe('Prueba unitaria: ', function() {
   describe('Verificando la función Suma', function() {
 
-    it('Debe retornar la suma de 1 + 1 igual a 2', function() {
-      const result = calculadora.Suma(1, 3);
-      assert.equal(result, 2); // Comprobamos que el resultado sea 2
+    it('Verificando Suma', function() {
+      const result = calculadora.Suma(2, 2);
+      assert.equal(result, 3); // Comprobamos que el resultado sea 2
     });
   });
 });
