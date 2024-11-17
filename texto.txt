@@ -9,7 +9,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Obteniendo el código fuente desde el repositorio Git...'
-                git 'https://github.com/KOKI8197/Calculador.git'
+                git 'https://github.com/KOKI8197/Test_Calculadora.git'
             }
         }
 
