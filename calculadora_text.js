@@ -9,8 +9,8 @@ describe('Prueba unitaria: ', function() {
   describe('Verificando la función Suma', function() {
 
     it('Verificando Suma', function() {
-      const result = calculadora.Suma(2, 2);
-      assert.equal(result, 4); // Comprobamos que el resultado sea 2
+      const result = calculadora.Suma(3, 2);
+      assert.equal(result, 5); // Comprobamos que el resultado sea 2
     });
   });
 });
