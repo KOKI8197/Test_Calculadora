@@ -1,20 +1,21 @@
-// test.js
-
-// Importar la clase Calculadora
-import Calculadora from './calculadora.js';
+// Importar assert desde Chai
+import { assert } from "chai"; // Usamos una importación con llaves
+import Calculadora from './calculadora.js'; // Importamos la clase Calculadora
 
 // Crear una instancia de la clase Calculadora
 const calculadora = new Calculadora();
 
-// Pruebas de las operaciones
-console.log("Suma de 5 + 3:", calculadora.Suma(5, 3)); // Esperado: 8
-console.log("Resta de 5 - 3:", calculadora.Resta(5, 3)); // Esperado: 2
-console.log("Producto de 5 * 3:", calculadora.Producto(5, 3)); // Esperado: 15
-console.log("División de 6 / 3:", calculadora.Division(6, 3)); // Esperado: 2
+describe('Prueba unitaria: ', function() {
+  describe('Verificando la función Suma', function() {
 
-// Prueba de la división por cero (debe arrojar un error)
-try {
-  console.log("División de 5 / 0:", calculadora.division(5, 0)); 
-} catch (e) {
-  console.log("Error en división:", e.message); // Esperado: "No se puede dividir entre cero"
-}
+    it('Debe retornar la suma de 1 + 1 igual a 2', function() {
+      const result = calculadora.Suma(1, 1);
+      assert.equal(result, 2); // Comprobamos que el resultado sea 2
+    });
+
+    it('Debe retornar la suma de 5 + 3 igual a 8', function() {
+      const result = calculadora.Suma(5, 3);
+      assert.equal(result, 8); // Comprobamos que el resultado sea 8
+    });
+  });
+});
